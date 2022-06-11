@@ -18,3 +18,5 @@ CREATE TABLE Comuna (
     nombre VARCHAR2(250) NOT NULL,
     provincia_id NUMBER NOT NULL
 );
+
+ALTER TABLE Cliente ADD CONSTRAINT comuna_pk PRIMARY KEY (id_comuna)
