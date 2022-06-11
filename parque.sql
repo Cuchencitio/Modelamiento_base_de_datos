@@ -11,6 +11,8 @@ CREATE TABLE Cliente (
     comuna_id NUMBER NOT NULL, 
 );
 
+ALTER TABLE Cliente ADD CONSTRAINT cliente_pk PRIMARY KEY (rut_cliente)
+
 CREATE TABLE Comuna (
     id_comuna NUMBER NOT NULL,
     nombre VARCHAR2(250) NOT NULL,
