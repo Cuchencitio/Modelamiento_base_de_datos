@@ -11,7 +11,7 @@ CREATE TABLE Clientes (
     comuna_id NUMBER NOT NULL, 
 );
 
-ALTER TABLE Clientes ADD CONSTRAINT cliente_pk PRIMARY KEY (rut_cliente)
+ALTER TABLE Clientes ADD CONSTRAINT cliente_pk PRIMARY KEY (rut_cliente);
 
 CREATE TABLE Comunas (
     id_comuna NUMBER NOT NULL,
@@ -20,3 +20,6 @@ CREATE TABLE Comunas (
 );
 
 ALTER TABLE Comunas ADD CONSTRAINT comuna_pk PRIMARY KEY (id_comuna)
+
+ALTER TABLE Clientes ADD CONSTRAINT comuna_fk FOREIGN KEY (comuna_id)
+    REFERENCES Comunas (id_comuna);
